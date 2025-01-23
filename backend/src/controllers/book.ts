@@ -17,3 +17,7 @@ export const deleteBook = async (
     res.status(500).json({ message: "Error deleting task" });
   }
 };
+export const addBook = async(
+  req:Request,
+  res:Response,
+)
