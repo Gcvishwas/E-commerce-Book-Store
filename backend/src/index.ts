@@ -1,9 +1,11 @@
 import express from "express";
 import dotenv from "dotenv";
-
 import cors from "cors";
-
+import connectDB from "./utils/db";
+import bookRoutes from "./routes/book";
+import orderRoutes from "./routes/order";
 dotenv.config();
+connectDB();
 
 const app = express();
 
@@ -14,6 +16,9 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
+
+app.use("/api", bookRoutes);
+app.use("/api", orderRoutes);
 
 const PORT = process.env.PORT || 5000;
 
