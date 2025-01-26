@@ -4,6 +4,7 @@ import cors from "cors";
 import connectDB from "./utils/db";
 import bookRoutes from "./routes/book";
 import orderRoutes from "./routes/order";
+import userRoutes from "./routes/user";
 dotenv.config();
 connectDB();
 
@@ -19,6 +20,7 @@ app.use(cors(corsOptions));
 
 app.use("/api", bookRoutes);
 app.use("/api", orderRoutes);
+app.use("/api", userRoutes);
 
 const PORT = process.env.PORT || 5000;
 
