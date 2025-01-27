@@ -1,5 +1,15 @@
 import React, { useEffect, useState } from "react";
 import BookCard from "../books/bookcard";
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// import required modules
+import { Pagination } from 'swiper/modules';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+
+
 
 const TopSeller = () => {
   const [books, setBooks] = useState([]);
@@ -40,11 +50,42 @@ const TopSeller = () => {
         </select>
       </div>
 
-      {/* Book Listing */}
+      <Swiper
+        slidesPerView={1}
+        spaceBetween={10}
 
-      {filteredBooks.map((book, index) => (
-        <BookCard key={index} book={book} />
-      ))}
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 2,
+            spaceBetween: 50,
+          },
+          1180: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+        }}
+        modules={[Pagination]}
+        className="mySwiper"
+      >
+
+        {/* Book Listing */}
+
+        {filteredBooks.length > 0 && filteredBooks.map((book, index) => (
+          <SwiperSlide>
+            <BookCard key={index} book={book} />
+          </SwiperSlide>
+        ))}
+
+      </Swiper>
+
 
     </div>
   );
