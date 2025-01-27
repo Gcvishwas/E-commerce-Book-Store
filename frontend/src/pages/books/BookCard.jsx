@@ -1,35 +1,40 @@
 import React from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { getImgUrl } from "../../utils/getImgUrl";
-
+import { Link } from 'react-router-dom';
 const BookCard = ({ book }) => {
     return (
         <div className="rounded-lg transition-shadow duration-300 shadow-lg p-4">
             <div className="flex flex-col sm:flex-row sm:items-center sm:h-72 sm:justify-center gap-4">
                 {/* Book Image */}
                 <div className="sm:h-72 sm:flex-shrink-0 border rounded-md">
-                    <a href="/">
+                    <Link to={`/books/${book._id}`}>
                         <img
                             src={`${getImgUrl(book.coverImage)}`}
                             alt={book.title}
                             className="w-full bg-cover p-2 rounded-md cursor-pointer hover:scale-105 transition-all duration-200"
                         />
-                    </a>
+                    </Link>
                 </div>
 
                 {/* Book Details */}
                 <div>
-                    <a href="/">
+                    <Link to={`/books/${book._id}`}>
                         <h3 className="text-xl font-semibold hover:text-blue-600 mb-3">
-                            {book.title}
+                            {book?.title}
                         </h3>
-                    </a>
-                    <p className="text-gray-600 mb-5">{book.description}</p>
+                    </Link>
+                    <p className="text-gray-600 mb-5">
+                        {book?.description.length > 80
+                            ? `${book?.description.slice(0, 80)}...`
+                            : book?.description}
+                    </p>
+
                     <p className="font-medium mb-5">
-                        ${book.price}{" "}
-                        {book.discountPrice && (
+                        ${book?.newPrice}{" "}
+                        {book?.oldPrice && (
                             <span className="line-through font-normal ml-2">
-                                ${book.discountPrice}
+                                ${book?.oldPrice}
                             </span>
                         )}
                     </p>
