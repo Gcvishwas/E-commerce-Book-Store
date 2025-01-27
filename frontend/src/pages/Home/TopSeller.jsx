@@ -1,15 +1,9 @@
 import React, { useEffect, useState } from "react";
 import BookCard from "../books/bookcard";
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-// import required modules
-import { Pagination } from 'swiper/modules';
-
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 
 const TopSeller = () => {
   const [books, setBooks] = useState([]);
@@ -30,15 +24,15 @@ const TopSeller = () => {
       );
 
   return (
-    <div className="py-10">
-      <h2 className="text-3xl font-semibold mb-6">Top Sellers</h2>
+    <div className="py-10 bg-gray-50">
+      <h2 className="text-4xl font-bold text-center mb-8 text-gray-800">Top Sellers</h2>
 
       {/* Filter */}
-      <div className="mb-8 flex items-center">
+      <div className="mb-10 flex justify-center">
         <select
           name="category"
           id="category"
-          className="border bg-[#EAEAEA] border-gray-300 rounded-md px-4 py-2 focus:outline-none"
+          className="border border-gray-300 bg-white rounded-lg px-4 py-2 focus:ring-2 focus:ring-indigo-400 shadow-md text-gray-700"
           value={selectedCategory}
           onChange={(e) => setSelectedCategory(e.target.value)}
         >
@@ -52,41 +46,26 @@ const TopSeller = () => {
 
       <Swiper
         slidesPerView={1}
-        spaceBetween={10}
-
+        spaceBetween={20}
         breakpoints={{
-          640: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 40,
-          },
-          1024: {
-            slidesPerView: 2,
-            spaceBetween: 50,
-          },
-          1180: {
-            slidesPerView: 3,
-            spaceBetween: 50,
-          },
+          640: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
         }}
         modules={[Pagination]}
-        className="mySwiper"
+        pagination={{ clickable: true }}
+        className="px-6"
       >
-
-        {/* Book Listing */}
-
-        {filteredBooks.length > 0 && filteredBooks.map((book, index) => (
-          <SwiperSlide>
-            <BookCard key={index} book={book} />
-          </SwiperSlide>
-        ))}
-
+        {filteredBooks.length > 0 ? (
+          filteredBooks.map((book, index) => (
+            <SwiperSlide key={index}>
+              <BookCard book={book} />
+            </SwiperSlide>
+          ))
+        ) : (
+          <p className="text-center text-gray-600">No books available.</p>
+        )}
       </Swiper>
-
-
     </div>
   );
 };

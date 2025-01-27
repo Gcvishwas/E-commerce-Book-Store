@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { HiBars3CenterLeft } from "react-icons/hi2";
+
 import { GiArchiveResearch } from "react-icons/gi";
-import { FaUserGraduate } from "react-icons/fa";
+import { FaUserGraduate, FaShoppingCart } from "react-icons/fa";
 import { GrFavorite } from "react-icons/gr";
-import { FaShoppingCart } from "react-icons/fa";
 import avatarImg from "../assets/avatar.png";
 
 const navigation = [
@@ -13,53 +12,48 @@ const navigation = [
   { name: "Cart Page", href: "/cart" },
   { name: "Check Out", href: "/checkout" },
 ];
+
 const Navbar = () => {
   const currentUser = true;
-
   const [isDropdownOpen, setIsdropdownOpen] = useState(false);
 
   return (
-    <header className="max-w-screen-2xl mx-auto px-4 py-4 bg-purple-600 max-h-fit">
+    <header className="max-w-screen-2xl mx-auto px-6 py-4 bg-gradient-to-r from-purple-600 to-indigo-500">
       <nav className="flex justify-between items-center">
         {/* Left side with logo and search */}
         <div className="flex items-center md:gap-8 gap-4">
           {/* Logo */}
-
           <Link
             to="/"
-            className="flex items-center text-white text-2xl font-semibold"
+            className="flex items-center text-white text-3xl font-bold tracking-wide"
           >
             Read<span className="text-yellow-300">It</span>
           </Link>
 
           {/* Search input */}
-
           <div className="relative sm:w-64 w-40">
-            <GiArchiveResearch className="absolute right-3 top-1/2 transform -translate-y-1/2 text-black text-2xl" />
-
+            <GiArchiveResearch className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-600 text-2xl" />
             <input
               type="text"
-              placeholder="Search for book"
-              className="bg-[#EAEAEA] w-full py-2 pl-3 pr-4 rounded-lg focus:outline-none text-md"
+              placeholder="Search for books"
+              className="bg-gray-100 w-full py-2 pl-4 pr-10 rounded-full focus:ring-2 focus:ring-purple-400 transition-shadow shadow-md text-sm"
             />
           </div>
         </div>
 
-        {/* right side */}
-
-        <div className="relative flex items-center md:space-x-3 space-x-2">
+        {/* Right side */}
+        <div className="flex items-center gap-4">
           {/* Shopping Cart */}
-
           <Link
             to="/cart"
-            className="bg-primary p-1 sm:px-6 px-2 flex items-center rounded-md hover:bg-yellow-200 transition duration-75"
+            className="flex items-center px-4 py-2 rounded-full bg-yellow-400 hover:bg-yellow-300 transition-all shadow-md text-white font-medium"
           >
-            <FaShoppingCart className="text-lg " />
-            <span className="ml-1">0</span>
+            <FaShoppingCart className="text-lg" />
+            <span className="ml-2">0</span>
           </Link>
 
           {/* Favorite */}
-          <button className="hidden sm:block p-2 rounded-full hover:bg-red-500 transition duration-300">
+          <button className="hidden sm:block p-2.5 rounded-full w-10 h-10 hover:bg-red-500 transition duration-300">
             <GrFavorite className="text-white text-xl" />
           </button>
 
@@ -69,20 +63,17 @@ const Navbar = () => {
               <>
                 <button
                   onClick={() => setIsdropdownOpen(!isDropdownOpen)}
-                  className="relative"
+                  className="focus:outline-none"
                 >
                   <img
                     src={avatarImg}
                     alt="Avatar"
-                    className={`h-7 w-7 rounded-full ${
-                      currentUser ? "ring-2 ring-blue-500" : ""
-                    }`}
+                    className="h-10 w-10 rounded-full border-2 border-white shadow-md"
                   />
                 </button>
 
-                {/* Dropdown */}
                 {isDropdownOpen && (
-                  <div className="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-md z-40">
+                  <div className="absolute right-0 mt-2 w-48 bg-white shadow-xl rounded-lg z-50">
                     <ul className="py-2">
                       {navigation.map((item) => (
                         <li
@@ -91,7 +82,7 @@ const Navbar = () => {
                         >
                           <Link
                             to={item.href}
-                            className="block px-4 py-2 text-sm hover:bg-gray-100"
+                            className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md"
                           >
                             {item.name}
                           </Link>
@@ -102,13 +93,14 @@ const Navbar = () => {
                 )}
               </>
             ) : (
-              <Link to="/login">
-                <FaUserGraduate className="h-6 w-6" />
+              <Link
+                to="/login"
+                className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-500 hover:bg-blue-600 text-white shadow-md"
+              >
+                <FaUserGraduate className="text-xl" />
               </Link>
             )}
           </div>
-
-          <></>
         </div>
       </nav>
     </header>
