@@ -1,8 +1,7 @@
 import React from 'react'
 import { useForm } from "react-hook-form"
-import { Link } from "react-router-dom"
-
-const Login = () => {
+import { Link } from 'react-router-dom'
+const Register = () => {
     const {
         register,
         handleSubmit,
@@ -15,10 +14,11 @@ const Login = () => {
     const handleGoogleSignIn = () => {
 
     }
+
     return (
         <div className='h-[calc(100vh-120px)] flex justify-center items-center'>
             <div className='w-full max-w-md mx-auto bg-gradient-to-r from-indigo-100 via-blue-100 to-indigo-200 shadow-xl rounded-md px-10 pt-8 pb-10 mb-4'>
-                <h2 className='text-xl font-bold mb-4 text-gray-700'>Please Login</h2>
+                <h2 className='text-xl font-bold mb-4 text-gray-700'>Please Register</h2>
 
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                     <div>
@@ -52,11 +52,14 @@ const Login = () => {
                         type="submit"
                         className="w-full bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                     >
-                        Sign in
-                    </button>
-                    <p>Don't have an account?<span><Link to="/register" className="text-sm text-gray-700 hover:underline cursor-pointer">
                         Register
-                    </Link></span></p>
+                    </button>
+                    <p>Already have an account?
+                        <span><Link to="/login" className="text-sm text-gray-700 hover:underline cursor-pointer">
+
+                            Login
+                        </Link></span>
+                    </p>
                 </form>
                 <div className="text-center mt-8">
                     <div className="text-center mt-8">
@@ -73,8 +76,7 @@ const Login = () => {
                 </div>
             </div>
         </div >
-
     )
 }
 
-export default Login
+export default Register
