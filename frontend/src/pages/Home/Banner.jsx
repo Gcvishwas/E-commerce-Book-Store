@@ -2,6 +2,12 @@ import React from "react";
 import bannerImg from "../../assets/banner.png";
 
 const Banner = () => {
+  const handleScrollToRecommended = () => {
+    const recommendedSection = document.getElementById("recommended");
+    if (recommendedSection) {
+      recommendedSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <div className="w-full flex flex-col md:flex-row-reverse justify-between items-center gap-12 px-6 md:px-12 py-10 md:py-16 bg-gradient-to-r">
       {/* Image Section */}
@@ -9,7 +15,8 @@ const Banner = () => {
         <img
           src={bannerImg}
           alt="Books Banner"
-          className="rounded-lg s transform hover:scale-105 transition-transform duration-300"
+          className="rounded-lg s transform hover:scale-105 transition-transform duration-300 cursor-pointer"
+          onClick={handleScrollToRecommended}
         />
       </div>
 

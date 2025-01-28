@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import BookCard from "../books/BookCard";
+import BookCard from '../books/bookcard';
 
 const Recommended = () => {
     const [books, setBooks] = useState([]);
@@ -17,7 +17,7 @@ const Recommended = () => {
     }, []);
 
     return (
-        <div className="bg-gray-100 py-16 px-6">
+        <div id="recommended" className="bg-gray-100 py-16 px-6">
             <h2 className="text-4xl font-bold text-center mb-10 text-gray-800">
                 Confused? Here's What You Can Read
             </h2>
