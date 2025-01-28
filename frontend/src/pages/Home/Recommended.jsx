@@ -17,8 +17,10 @@ const Recommended = () => {
     }, []);
 
     return (
-        <div>
-            <h2 className="text-4xl font-bold text-center mb-8 text-gray-800">Confused? Here's what you can read</h2>
+        <div className="bg-gray-100 py-16 px-6">
+            <h2 className="text-4xl font-bold text-center mb-10 text-gray-800">
+                Confused? Here's What You Can Read
+            </h2>
             <Swiper
                 slidesPerView={1}
                 spaceBetween={20}
@@ -42,6 +44,7 @@ const Recommended = () => {
                 )}
             </Swiper>
         </div>
+
     )
 }
 
