@@ -5,6 +5,7 @@ import { GiArchiveResearch } from "react-icons/gi";
 import { FaUserGraduate, FaShoppingCart } from "react-icons/fa";
 import { GrFavorite } from "react-icons/gr";
 import avatarImg from "../assets/avatar.png";
+import { useSelector } from "react-redux";
 
 const navigation = [
   { name: "Dashboard", href: "/dashboard" },
@@ -14,6 +15,7 @@ const navigation = [
 ];
 
 const Navbar = () => {
+  const cartItems = useSelector((state) => state.cart.cartItems);
   const currentUser = false;
   const [isDropdownOpen, setIsdropdownOpen] = useState(false);
 
@@ -49,7 +51,11 @@ const Navbar = () => {
             className="flex items-center px-4 py-2 rounded-full bg-yellow-400 hover:bg-yellow-300 transition-all shadow-md text-white font-medium"
           >
             <FaShoppingCart className="text-lg" />
-            <span className="ml-2">0</span>
+            {cartItems.length > 0 ? (
+              <span className="ml-2">{cartItems.length}</span>
+            ) : (
+              <span className="ml-2">0</span>
+            )}
           </Link>
 
           {/* Favorite */}
