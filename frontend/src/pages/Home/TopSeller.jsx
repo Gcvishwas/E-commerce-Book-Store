@@ -1,43 +1,40 @@
 import React, { useEffect, useState } from "react";
+import BookCard from "../books/bookcard";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 
 const TopSeller = () => {
   const [books, setBooks] = useState([]);
-  const [selectedCategory, setselectedCategory] = useState("Choose genre");
-  const categories = [
-    "Choose genre",
-    "Business",
-    "Fiction",
-    "Horror",
-    "Adventure",
-  ];
+  const [selectedCategory, setSelectedCategory] = useState("Choose genre");
+  const categories = ["Choose genre", "Business", "Fiction", "Horror", "Adventure"];
 
   useEffect(() => {
     fetch("books.json")
       .then((res) => res.json())
       .then((data) => setBooks(data));
-  }, []); // Add dependency array to run only once
+  }, []);
 
-  // Filter books based on selected category
   const filteredBooks =
     selectedCategory === "Choose genre"
       ? books
       : books.filter(
-          (book) =>
-            book.category.toLowerCase() === selectedCategory.toLowerCase()
-        );
+        (book) => book.category.toLowerCase() === selectedCategory.toLowerCase()
+      );
 
   return (
-    <div className="py-10">
-      <h2 className="text-3xl font-semibold mb-6">Top Sellers</h2>
+    <div className="py-10 bg-gray-50">
+      <h2 className="text-4xl font-bold text-center mb-8 text-gray-800">Top Sellers</h2>
 
       {/* Filter */}
-      <div className="mb-8 flex items-center">
+      <div className="mb-10 flex justify-center">
         <select
           name="category"
           id="category"
-          className="border bg-[#EAEAEA] border-gray-300 rounded-md px-4 py-2 focus:outline-none"
+          className="border border-gray-300 bg-white rounded-lg px-4 py-2 focus:ring-2 focus:ring-indigo-400 shadow-md text-gray-700"
           value={selectedCategory}
-          onChange={(e) => setselectedCategory(e.target.value)} // Update selectedCategory on change
+          onChange={(e) => setSelectedCategory(e.target.value)}
         >
           {categories.map((category, index) => (
             <option key={index} value={category}>
@@ -47,15 +44,28 @@ const TopSeller = () => {
         </select>
       </div>
 
-      {/* Book Listing */}
-      <ul>
-        {filteredBooks.map((book, index) => (
-          <li key={index} className="mb-4">
-            <h3 className="text-xl font-medium">{book.title}</h3>
-            <p className="text-gray-600">Category: {book.category}</p>
-          </li>
-        ))}
-      </ul>
+      <Swiper
+        slidesPerView={1}
+        spaceBetween={20}
+        breakpoints={{
+          640: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        }}
+        modules={[Pagination]}
+        pagination={{ clickable: true }}
+        className="px-6"
+      >
+        {filteredBooks.length > 0 ? (
+          filteredBooks.map((book, index) => (
+            <SwiperSlide key={index}>
+              <BookCard book={book} />
+            </SwiperSlide>
+          ))
+        ) : (
+          <p className="text-center text-gray-600">No books available.</p>
+        )}
+      </Swiper>
     </div>
   );
 };

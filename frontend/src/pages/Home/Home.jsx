@@ -1,12 +1,16 @@
 import React from "react";
 import Banner from "./banner";
 import TopSeller from "./TopSeller";
+import Recommended from "./Recommended";
+import News from "./News";
 
 const Home = () => {
   return (
     <>
       <Banner />
       <TopSeller />
+      <Recommended />
+      <News />
     </>
   );
 };
