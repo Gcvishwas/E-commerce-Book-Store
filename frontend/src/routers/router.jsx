@@ -2,8 +2,10 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import Home from "../pages/Home/home";
 import Login from "../components/Login";
-import Recommended from "../pages/Home/Recommended";
 import Register from "../components/Register";
+
+import { CartPage } from "../pages/books/CartPage";
+import CheckoutPage from "../pages/books/CheckOutPage";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +28,10 @@ const router = createBrowserRouter([
         path: "/login",
         element: <Login />,
       },
+      { path: "/cart", element: <CartPage /> },
+      { path: "/checkout", element: <CheckoutPage /> },
+
+
 
     ],
   },
