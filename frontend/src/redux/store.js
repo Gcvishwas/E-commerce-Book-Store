@@ -4,5 +4,7 @@ import cartReducer from "./features/cart";
 export const store = configureStore({
   reducer: {
     cart: cartReducer,
+    [bookApi,reducerPath]:booksApi.reducer,
+    [ordersApi,reducerPath]:orderApi.reducer,
   },
 });
