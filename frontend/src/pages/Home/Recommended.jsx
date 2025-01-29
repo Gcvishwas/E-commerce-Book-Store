@@ -24,7 +24,7 @@ const Recommended = () => {
         spaceBetween={20}
         breakpoints={{
           640: { slidesPerView: 1 },
-          768: { slidesPerView: 2 },
+          768: { slidesPerView: 1 },
           1024: { slidesPerView: 3 },
         }}
         modules={[Pagination]}
@@ -45,4 +45,5 @@ const Recommended = () => {
   );
 };
 
-export default Recommended;
+
+export default Recommended
