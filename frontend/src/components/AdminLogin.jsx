@@ -71,7 +71,7 @@ const AdminLogin = () => {
                             <input type="checkbox" className="form-checkbox h-4 w-4 text-blue-600" />
                             <span className="ml-2 text-gray-700">Remember me</span>
                         </label>
-                        <a href="#" className="text-sm text-gray-700 hover:underline">Forgot password?</a>
+
                     </div>
                     <button
                         type="submit"
