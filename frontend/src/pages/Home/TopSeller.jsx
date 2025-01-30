@@ -1,14 +1,20 @@
-import React, { useEffect, useState } from "react";
-import BookCard from "../books/bookcard";
+import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import BookCard from "../books/BookCard";
 
 const TopSeller = () => {
   const [books, setBooks] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("Choose genre");
-  const categories = ["Choose genre", "Business", "Fiction", "Horror", "Adventure"];
+  const categories = [
+    "Choose genre",
+    "Business",
+    "Fiction",
+    "Horror",
+    "Adventure",
+  ];
 
   useEffect(() => {
     fetch("books.json")
@@ -20,12 +26,15 @@ const TopSeller = () => {
     selectedCategory === "Choose genre"
       ? books
       : books.filter(
-        (book) => book.category.toLowerCase() === selectedCategory.toLowerCase()
-      );
+          (book) =>
+            book.category.toLowerCase() === selectedCategory.toLowerCase()
+        );
 
   return (
     <div className="py-10 bg-gray-50">
-      <h2 className="text-4xl font-bold text-center mb-8 text-gray-800">Top Sellers</h2>
+      <h2 className="text-4xl font-bold text-center mb-8 text-gray-800">
+        Top Sellers
+      </h2>
 
       {/* Filter */}
       <div className="mb-10 flex justify-center">
@@ -49,7 +58,7 @@ const TopSeller = () => {
         spaceBetween={20}
         breakpoints={{
           640: { slidesPerView: 1 },
-          768: { slidesPerView: 2 },
+          768: { slidesPerView: 1 },
           1024: { slidesPerView: 3 },
         }}
         modules={[Pagination]}
