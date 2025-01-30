@@ -16,15 +16,15 @@ const TopSeller = () => {
     "Adventure",
   ];
 
-  const { data: books = [] } = useFetchAllBooksQuery;
+  const { data: books = [] } = useFetchAllBooksQuery();
 
   const filteredBooks =
     selectedCategory === "Choose genre"
       ? books
       : books.filter(
-          (book) =>
-            book.category.toLowerCase() === selectedCategory.toLowerCase()
-        );
+        (book) =>
+          book.category.toLowerCase() === selectedCategory.toLowerCase()
+      );
 
   return (
     <div className="py-10 bg-gray-50">

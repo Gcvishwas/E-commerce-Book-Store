@@ -6,7 +6,7 @@ import BookCard from "../books/BookCard";
 import { useFetchAllBooksQuery } from "../../redux/features/books/booksapi";
 
 const Recommended = () => {
-  const { data: books = [] } = useFetchAllBooksQuery;
+  const { data: books = [] } = useFetchAllBooksQuery();
 
   return (
     <div id="recommended" className="bg-gray-100 py-16 px-6">
