@@ -2,8 +2,10 @@ import { FiShoppingCart } from "react-icons/fi";
 import { useParams } from "react-router-dom";
 import { getImgUrl } from "../../utils/getImgUrl";
 import { useDispatch } from "react-redux";
+
 import { useFetchBookByIdQuery } from "../../redux/features/books/booksapi";
 import { addtoCart } from "../../redux/features/carts/cart";
+
 
 const SingleBook = () => {
   const { id } = useParams();
