@@ -6,7 +6,7 @@ import Register from "../components/Register";
 
 import CartPage from "../pages/books/CartPage";
 import CheckoutPage from "../pages/books/CheckOutPage";
-import { SingleBook } from "../pages/books/SingleBook";
+import SingleBook from "../pages/books/SingleBook";
 import OrderPage from "../pages/books/Orderpage";
 
 const router = createBrowserRouter([
