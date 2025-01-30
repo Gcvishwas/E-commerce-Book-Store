@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import { FaShoppingCart } from "react-icons/fa";
+import PropTypes from "prop-types";
 import { getImgUrl } from "../../utils/getImgUrl";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
@@ -55,6 +55,16 @@ const BookCard = ({ book }) => {
       </div>
     </div>
   );
+};
+BookCard.propTypes = {
+  book: PropTypes.shape({
+    _id: PropTypes.string.isRequired,
+    coverImage: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    newPrice: PropTypes.number.isRequired,
+    oldPrice: PropTypes.number,
+  }).isRequired,
 };
 
 export default BookCard;

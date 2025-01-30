@@ -10,7 +10,7 @@ import verifyAdminToken from "../middleware/verifyAdmin";
 
 const router = express.Router();
 
-router.post("/create-book", verifyAdminToken, addBook);
+router.post("/create-book", addBook);
 router.get("/", getAllBooks);
 router.get("/:id", getASingleBook);
 router.put("/edit/:id", verifyAdminToken, updateBooks);
