@@ -17,7 +17,7 @@ export const cartSlice = createSlice({
         Swal.fire({
           position: "center",
           icon: "success",
-          title: "Your work has been saved",
+          title: "Product added to cart",
           showConfirmButton: false,
           timer: 1500
         });

@@ -255,13 +255,13 @@ const CheckoutPage = () => {
                           className="form-checkbox"
                         />
                         <label htmlFor="billing_same" className="ml-2 ">
-                          I am aggree to the{" "}
+                          I agree to the{" "}
                           <Link className="underline underline-offset-2 text-blue-600">
                             Terms & Conditions
                           </Link>{" "}
                           and{" "}
                           <Link className="underline underline-offset-2 text-blue-600">
-                            Shoping Policy.
+                            Shopping Policy.
                           </Link>
                         </label>
                       </div>
