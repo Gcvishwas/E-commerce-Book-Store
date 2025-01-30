@@ -4,7 +4,7 @@ import Home from "../pages/Home/home";
 import Login from "../components/Login";
 import Register from "../components/Register";
 
-import { CartPage } from "../pages/books/CartPage";
+import CartPage from "../pages/books/CartPage";
 import CheckoutPage from "../pages/books/CheckOutPage";
 
 const router = createBrowserRouter([
