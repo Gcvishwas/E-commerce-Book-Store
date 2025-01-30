@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form"
 import { useState } from 'react'
 import axios from "axios";
 import getBaseUrl from '../utils/baseUrl';
+import { useNavigate } from 'react-router-dom';
 const AdminLogin = () => {
     const [message, setMessage] = useState("")
     const {
@@ -12,6 +13,7 @@ const AdminLogin = () => {
         formState: { errors },
     } = useForm()
 
+    const navigate = useNavigate;
     const onSubmit = async (data) => {
         console.log(data);
         try {
@@ -22,7 +24,17 @@ const AdminLogin = () => {
             })
             const auth = response.data;
             console.log(auth);
-            // navigate("/")
+            if (auth.token) {
+                localStorage.setItem('token', auth.token);
+                setTimeout(() => {
+                    localStorage.removeItem('token')
+                    alert('Token has expired!Please login again');
+                    navigate("/admin");
+                }, 3600 * 1000)
+            }
+
+            alert("Admin Login successfull!");
+            navigate("/dashboard");
         } catch (error) {
             setMessage("Please provide a valid Username and password")
             console.error(error)
