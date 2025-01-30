@@ -54,6 +54,7 @@ export const {
   useFetchAllBooksQuery,
   useFetchBooksIdQuery,
   useAddBookMutation,
+  useUpdateBookMutation,
   useDeleteBookMutation,
 } = booksApi;
 export default booksApi;
