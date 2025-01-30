@@ -3,12 +3,12 @@ import { FaShoppingCart } from "react-icons/fa";
 import { getImgUrl } from "../../utils/getImgUrl";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../../redux/features/carts/cart";
+import { addtoCart } from "../../redux/features/carts/cart";
 
 const BookCard = ({ book }) => {
   const dispatch = useDispatch();
   const handleAddToCart = (product) => {
-    dispatch(addToCart(product));
+    dispatch(addtoCart(product));
   };
   return (
     <div className="rounded-lg transition-shadow duration-300 shadow-lg bg-white p-6 hover:shadow-2xl">

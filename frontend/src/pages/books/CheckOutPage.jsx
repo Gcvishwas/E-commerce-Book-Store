@@ -1,9 +1,10 @@
 import { useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
-import { useAuth } from "../../context/AuthContext";
+// import { useAuth } from "../../context/AuthContext";
 
 import Swal from "sweetalert2";
+
 import { useCreateOrderMutation } from "../../redux/features/orders/ordersApi";
 import { useState } from "react";
 
@@ -12,7 +13,7 @@ const CheckoutPage = () => {
   const totalPrice = cartItems
     .reduce((acc, item) => acc + item.newPrice, 0)
     .toFixed(2);
-  const { currentUser } = useAuth();
+  const { currentUser } = false;
   const {
     register,
     handleSubmit,
@@ -20,7 +21,7 @@ const CheckoutPage = () => {
     formState: { errors },
   } = useForm();
 
-  const [createOrder, { isLoading, error }] = useCreateOrderMutation();
+  // const [createOrder, { isLoading, error }] = useCreateOrderMutation();
   const navigate = useNavigate();
 
   const [isChecked, setIsChecked] = useState(false);
@@ -57,7 +58,7 @@ const CheckoutPage = () => {
     }
   };
 
-  if (isLoading) return <div>Loading....</div>;
+  // if (isLoading) return <div>Loading....</div>;
   return (
     <section>
       <div className="min-h-screen p-6 bg-gray-100 flex items-center justify-center">
@@ -255,13 +256,13 @@ const CheckoutPage = () => {
                           className="form-checkbox"
                         />
                         <label htmlFor="billing_same" className="ml-2 ">
-                          I am aggree to the{" "}
+                          I agree to the{" "}
                           <Link className="underline underline-offset-2 text-blue-600">
                             Terms & Conditions
                           </Link>{" "}
                           and{" "}
                           <Link className="underline underline-offset-2 text-blue-600">
-                            Shoping Policy.
+                            Shopping Policy.
                           </Link>
                         </label>
                       </div>
