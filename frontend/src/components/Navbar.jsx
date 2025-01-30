@@ -5,6 +5,7 @@ import { GiArchiveResearch } from "react-icons/gi";
 import { FaUserGraduate, FaShoppingCart } from "react-icons/fa";
 import { GrFavorite } from "react-icons/gr";
 import avatarImg from "../assets/avatar.png";
+import { useAuth } from "../context/AuthContext";
 
 const navigation = [
   { name: "Dashboard", href: "/dashboard" },
@@ -14,8 +15,15 @@ const navigation = [
 ];
 
 const Navbar = () => {
-  const currentUser = false;
-  const [isDropdownOpen, setIsdropdownOpen] = useState(false);
+  
+  const [isDropdownOpen, setIsdropdownOpen] = useState(false)
+  
+
+  const {currentUser,logout} = useAuth()
+
+  const handleLogout = () => {
+    logout()
+  }
 
   return (
     <header className="max-w-screen-2xl mx-auto px-6 py-4 bg-gradient-to-r from-purple-600 to-indigo-500">
@@ -88,6 +96,11 @@ const Navbar = () => {
                           </Link>
                         </li>
                       ))}
+                      <li>
+                        <button
+                        onClick={handleLogout}
+                         className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">Logout</button>
+                      </li>
                     </ul>
                   </div>
                 )}
