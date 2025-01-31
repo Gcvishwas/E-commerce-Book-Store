@@ -3,13 +3,13 @@ import InputField from '../addBook/InputField';
 import SelectField from '../addBook/SelectField';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router-dom';
-import { useFetchBooksIdQuery, useUpdateBookMutation } from '../../../redux/features/books/booksapi';
+import { useFetchBookByIdQuery, useUpdateBookMutation } from '../../../redux/features/books/booksapi';
 import Loading from '../../../components/Loading';
 import Swal from 'sweetalert2';
 
 const UpdateBook = () => {
     const { id } = useParams();
-    const { data: bookData, isLoading, isError, refetch } = useFetchBooksIdQuery(id);
+    const { data: bookData, isLoading, isError, refetch } = useFetchBookByIdQuery(id);
     const [updateBook, { isLoading: isUpdating }] = useUpdateBookMutation();
     const { register, handleSubmit, setValue } = useForm();
 
