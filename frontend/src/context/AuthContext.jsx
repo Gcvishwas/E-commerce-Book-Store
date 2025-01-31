@@ -1,6 +1,13 @@
-import { createContext, useContext, useEffect, useState } from "react";
-import { auth } from "../firebase/firebase.config";
-import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { createContext, useContext, useEffect, useState } from 'react';
+import { auth } from '../firebase/firebase.config';
+import {
+    createUserWithEmailAndPassword,
+    GoogleAuthProvider,
+    onAuthStateChanged,
+    signInWithEmailAndPassword,
+    signInWithPopup,
+    signOut,
+} from 'firebase/auth';
 
 const AuthContext = createContext();
 export const useAuth = () => {
@@ -14,56 +21,48 @@ export const AuthProvide = ({ children }) => {
     const [currentUser, setCurrentUser] = useState(null);
     const [loading, setLoading] = useState(true);
 
-    // register a user
-    const registerUser = async (email,password) => {
+    // Register a user
+    const registerUser = async (email, password) => {
         return await createUserWithEmailAndPassword(auth, email, password);
-    }
+    };
 
-     
-    //login the user 
+    // Login the user
     const loginUser = async (email, password) => {
-        return await signInWithEmailAndPassword(auth, email, password)  
-    }
+        return await signInWithEmailAndPassword(auth, email, password);
+    };
 
-    //sign up with google 
+    // Sign up with Google
     const signInWithGoogle = async () => {
-        return await signInWithPopup(auth, googleProvider)
-    }
+        return await signInWithPopup(auth, googleProvider);
+    };
 
-    //logout the user 
+    // Logout the user
     const logout = () => {
-        return signOut(auth)
-    }
+        return signOut(auth);
+    };
 
-    //manage user
+    // Manage user
     useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth ,(user) =>{
+        const unsubscribe = onAuthStateChanged(auth, (user) => {
             setCurrentUser(user);
             setLoading(false);
 
-            if(user){
-                const {email, displayName, photoURl} = user;
-                const userData = {
-                    email, username: displayName, photo: photoURl
-                }
-               
+            if (user) {
+                const { email, displayName, photoURL } = user;
+                const userData = { email, username: displayName, photo: photoURL };
             }
-        })
+        });
 
-        return() => unsubscribe();
-    }, [])
+        return () => unsubscribe();
+    }, []);
 
     const value = {
         currentUser,
         registerUser,
         loginUser,
         signInWithGoogle,
-        logout
+        logout,
     };
 
-    return (
-        <AuthContext.Provider value={value}>
-            {children}
-        </AuthContext.Provider>
-    );
+    return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };

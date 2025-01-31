@@ -20,18 +20,18 @@ const navigation = [
 
 const Navbar = () => {
 
-  
-  const [isDropdownOpen, setIsdropdownOpen] = useState(false)
-  
 
-  const {currentUser,logout} = useAuth()
+  const [isDropdownOpen, setIsdropdownOpen] = useState(false)
+
+
+  const { currentUser, logout } = useAuth()
 
   const handleLogout = () => {
     logout()
   }
 
   const cartItems = useSelector((state) => state.cart.cartItems);
-  
+
 
 
   return (
@@ -111,8 +111,8 @@ const Navbar = () => {
                       ))}
                       <li>
                         <button
-                        onClick={handleLogout}
-                         className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">Logout</button>
+                          onClick={handleLogout}
+                          className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">Logout</button>
                       </li>
                     </ul>
                   </div>
