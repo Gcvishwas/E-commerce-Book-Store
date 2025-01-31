@@ -5,6 +5,7 @@ import connectDB from "./utils/db";
 import bookRoutes from "./routes/book";
 import orderRoutes from "./routes/order";
 import userRoutes from "./routes/user";
+import adminRoutes from "./admin/admin";
 dotenv.config();
 connectDB();
 
@@ -18,9 +19,10 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-app.use("/api", bookRoutes);
-app.use("/api", orderRoutes);
-app.use("/api", userRoutes);
+app.use("/api/books", bookRoutes);
+app.use("/api/orders", orderRoutes);
+app.use("/api/auth", userRoutes);
+app.use("/api/admin", adminRoutes);
 
 const PORT = process.env.PORT || 5000;
 

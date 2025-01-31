@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
-import Swal from 'sweetalert2'
+import Swal from "sweetalert2";
 const initialState = {
-  cartItems: []
+  cartItems: [],
 };
 
 export const cartSlice = createSlice({
@@ -19,7 +19,7 @@ export const cartSlice = createSlice({
           icon: "success",
           title: "Product added to cart",
           showConfirmButton: false,
-          timer: 1500
+          timer: 1500,
         });
       } else {
         Swal.fire({
@@ -29,8 +29,8 @@ export const cartSlice = createSlice({
           showCancelButton: true,
           confirmButtonColor: "#3085d6",
           cancelButtonColor: "#d33",
-          confirmButtonText: "Okay!"
-        })
+          confirmButtonText: "Okay!",
+        });
       }
     },
     removeFromCart: (state, action) => {
