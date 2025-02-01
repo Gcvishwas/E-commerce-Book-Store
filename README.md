@@ -71,7 +71,7 @@ Before you begin, ensure you have the following installed on your machine:
 1. **Clone the repository** 📂:
 
    ```bash
-   git clone https://github.com/ujjwal-207/E-commerce-Book-Store.git
+   git clone https://github.com/Gcvishwas/E-commerce-Book-Store.git
    cd E-commerce-Book-Store/backend
    ```
 
