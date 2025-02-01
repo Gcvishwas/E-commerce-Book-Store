@@ -5,36 +5,31 @@ import { useNavigate } from 'react-router-dom';
 import Loading from '../../components/Loading';
 
 const Dashboard = () => {
-    const [loading, setLoading] = useState(true);
-    const [data, setData] = useState({});
-    const navigate = useNavigate();
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await axios.get(`${getBaseUrl()}/api/admin`, {
-                    headers: {
-                        'Authorization': `Bearer ${localStorage.getItem('token')}}`,
-                        'Content-Type': 'application/json'
-                    }
-                })
+  const [loading, setLoading] = useState(true);
+  const [data, setData] = useState({});
+  const navigate = useNavigate();
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(`${getBaseUrl()}/api/admin`, {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}}`,
+            "Content-Type": "application/json",
+          },
+        });
 
-                setData(response.data);
-                setLoading(false);
-            } catch (error) {
-                console.error('Error:', error);
-                setLoading(false);
+        setData(response.data);
+        setLoading(false);
+      } catch (error) {
+        console.error("Error:", error);
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
 
-            }
-        }
-        fetchData();
-    }, []);
+  if (loading) return <Loading />;
+  return <div></div>;
+};
 
-    if (loading) return <Loading />
-    return (
-        <div>
-
-        </div>
-    )
-}
-
-export default Dashboard
+export default Dashboard;
