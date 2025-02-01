@@ -6,22 +6,21 @@ Welcome to the **E-commerce Book Store** repository! 🎉 This project is a full
 
 ## 📋 Table of Contents
 
-- [✨ Features](#✨-features)
-- [🛠️ Technologies Used](#🛠️-technologies-used)
-- [🚀 Getting Started](#🚀-getting-started)
-  - [📋 Prerequisites](#📋-prerequisites)
-  - [⚙️ Installation](#⚙️-installation)
-    - [💻 Backend Setup](#💻-backend-setup)
-    - [🌐 Frontend Setup](#🌐-frontend-setup)
-- [📂 Project Structure](#📂-project-structure)
-- [🤝 Contributing](#🤝-contributing)
-- [📜 License](#📜-license)
-- [👤 Authors](#👤-authors)
-
+- [✨ Features](#features)
+- [🛠️ Technologies Used](#technologies-used)
+- [🚀 Getting Started](#getting-started)
+  - [📋 Prerequisites](#prerequisites)
+  - [⚙️ Installation](#installation)
+    - [💻 Backend Setup](#backend-setup)
+    - [🌐 Frontend Setup](#frontend-setup)
+- [📂 Project Structure](#project-structure)
+- [🤝 Contributing](#contributing)
+- [📜 License](#license)
+- [👤 Authors](#authors)
 
 ---
 
-## ✨  Features
+## ✨ Features
 
 - **🔒 User Authentication**: Secure user login and registration using JWT.
 - **📚 Book Listings**: Browse and search through a wide range of books.
@@ -73,117 +72,3 @@ Before you begin, ensure you have the following installed on your machine:
    ```bash
    git clone https://github.com/ujjwal-207/E-commerce-Book-Store.git
    cd E-commerce-Book-Store/backend
-   ```
-
-   2.**Install dependencies** 📦:
-
-   ```bash
-   npm install
-   ```
-
-2. **Run Backend**:
-
-   ```bash
-    npm run dev
-   ```
-
-4.**Environment Setup**:
-Set it up like .env.example
-
-#### 🌐 Frontend Setup
-
-1. **Navigate to the frontend directory** 📂:
-
-   ```bash
-   cd ../frontend
-   ```
-
-   2.**Install dependencies 📦**:
-
-   ```bash
-   npm install
-   ```
-
-   3.**Run Frontend**:
-
-   ```bash
-   npm run dev
-   ```
-
----
-
-## 📂 Project Structure
-
-### Backend🛠️
-
-/backend
-├── src/
-│ ├── controllers/ # 🎛️ API controllers
-│ ├── models/ # 🗄️ MongoDB schemas and models
-│ ├── routes/ # 🛣️ API routes
-│ ├── middleware/ # 🔒 Middleware functions (e.g., auth)
-│ ├── utils/ # 🛠️ Utility functions
-│ └── index.ts # 🚀 Entry point for the backend server
-├── .env # 📝 Environment variables
-└── package.json # 📦 Node.js dependencies and scripts
-
-### Frontend 🖥️
-
-/frontend
-├── public/ # 📁 Static assets
-├── src/
-│ ├── components/ # 🧩 React components
-│ ├── redux/ # 📦 Redux store and actions
-│ ├── pages/ # 📄 Page components
-│ ├── routers/ # 🌐 API service calls
-│ ├── App.js # 🌟 Main application component
-│ └── index.js # 🚀 Entry point for the frontend
-├── .env # 📝 Environment variables
-└── package.json # 📦 Node.js dependencies and scripts
-
-## 🤝 Contributing
-
-We welcome contributions! 🙌 If you'd like to contribute to this project, please follow these steps:
-
-1. **Fork the repository** 🍴:
-
-   ```bash
-   git clone https://github.com/ujjwal-207/E-commerce-Book-Store.git
-   ```
-
-2. **Create a new branch** 🌿:
-
-   ```bash
-    git checkout -b feature/YourFeatureName
-   ```
-
-   3.**Commit your changes** ✍️:
-
-   ```bash
-    git commit -m 'Add some feature'
-   ```
-
-   4.**Push to the branch** 🚀:
-
-   ```bash
-    git push origin feature/YourFeatureName
-   ```
-
-   5.**Open a pull request** 🎉.
-   Please ensure your code follows the existing style and includes appropriate tests.
-
----
-
-## 📜License
-
-This project is licensed under the MIT License . See the LICENSE file for more details.
-
-Thank you for checking out the E-commerce Book Store ! 🙏 If you have any questions or suggestions, feel free to open an issue or contact the repository owner.
-
-Happy coding! 🚀📚
-
----
-
-## Authores 👤
-
-1.**Ujjwal Nepal**(github.com/ujjwal-207) 2.**Vishwas GC**(github.com/Gcvishwas) 3.**Sujal Neupane**(github.com/SujalNeupane9) 4.**Sujan Raj Pandey**
