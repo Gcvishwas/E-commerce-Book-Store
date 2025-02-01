@@ -6,7 +6,7 @@ Welcome to the **E-commerce Book Store** repository! 🎉 This project is a full
 
 ## 📋 Table of Contents
 
-- [✨ Features](#features)
+- [✨ Features](#Features)
 - [🛠️ Technologies Used](#technologies-used)
 - [🚀 Getting Started](#getting-started)
   - [📋 Prerequisites](#prerequisites)
@@ -20,7 +20,7 @@ Welcome to the **E-commerce Book Store** repository! 🎉 This project is a full
 
 ---
 
-## ✨ Features
+✨ ## Features
 
 - **🔒 User Authentication**: Secure user login and registration using JWT.
 - **📚 Book Listings**: Browse and search through a wide range of books.
