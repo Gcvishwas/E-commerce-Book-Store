@@ -148,7 +148,7 @@ We welcome contributions! 🙌 If you'd like to contribute to this project, plea
 1. **Fork the repository** 🍴:
 
    ```bash
-   git clone https://github.com/ujjwal-207/E-commerce-Book-Store.git
+   git clone https://github.com/Gcvishwas/E-commerce-Book-Store.git
    ```
 
 2. **Create a new branch** 🌿:
@@ -186,4 +186,4 @@ Happy coding! 🚀📚
 
 ## Authores 👤
 
-1.**Ujjwal Nepal**(github.com/ujjwal-207) 2.**Vishwas GC**(github.com/Gcvishwas) 3.**Sujal Neupane**(github.com/SujalNeupane9) 4.**Sujan Raj Pandey**
+1.**Vishwas GC**(github.com/Gcvishwas) 2.**Ujjwal Nepal**(github.com/ujjwal-207) 3.**Sujal Neupane**(github.com/SujalNeupane9) 4.**Sujan Raj Pandey**
