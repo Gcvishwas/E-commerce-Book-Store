@@ -16,7 +16,9 @@ import ManageBooks from "../pages/dashboard/manageBooks/ManageBooks";
 import AddBook from "../pages/dashboard/addBook/AddBook";
 import UpdateBook from "../pages/dashboard/EditBook/UpdateBook";
 
-
+// element: <AdminRoute>
+//           <DashhboardLayout />
+//         </AdminRoute>,
 const router = createBrowserRouter([
   {
     path: "/",
@@ -54,29 +56,29 @@ const router = createBrowserRouter([
       },
       {
         path: "/dashboard",
-        element: <AdminRoute>
+        element:
           <DashhboardLayout />
-        </AdminRoute>,
+        ,
         children: [
           {
             path: "",
-            element: <AdminRoute><Dashboard />
-            </AdminRoute>
+            element: <Dashboard />
+
           },
           {
             path: "add-new-book",
-            element: <AdminRoute><AddBook />
-            </AdminRoute>
+            element: <AddBook />
+
           },
           {
             path: "edit-book/:id",
-            element: <AdminRoute><UpdateBook />
-            </AdminRoute>
+            element: <UpdateBook />
+
           },
           {
             path: "manage-books",
-            element: <AdminRoute><ManageBooks />
-            </AdminRoute>
+            element: <ManageBooks />
+
           },
 
         ]
