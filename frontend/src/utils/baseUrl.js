@@ -1,5 +1,5 @@
 const getBaseUrl = () => {
-  return "https://readit-backend.onrender.com/";
+  return "http://localhost:10000";
 };
 
 export default getBaseUrl;
