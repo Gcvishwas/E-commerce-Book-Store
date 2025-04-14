@@ -1,4 +1,3 @@
-import React from "react";
 import Banner from "./banner";
 import TopSeller from "./TopSeller";
 import Recommended from "./Recommended";
