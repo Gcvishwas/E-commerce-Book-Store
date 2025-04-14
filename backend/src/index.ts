@@ -13,7 +13,7 @@ const app = express();
 
 app.use(express.json());
 const corsOptions = {
-  origin: ["http://localhost:5173", "https://readit-lime.vercel.app/"],
+  origin: ["http://localhost:5173", "https://e-commerce-book-store-ashen.vercel.app/"],
   credentials: true,
 };
 
