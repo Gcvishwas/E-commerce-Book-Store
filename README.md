@@ -37,7 +37,7 @@ Welcome to the **E-commerce Book Store** repository! 🎉 This project is a full
 ---
 
 
-## 🛠️Technologies Used
+## 🛠️Technologies-Used
 
 
 ## Backend 🔧
