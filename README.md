@@ -117,7 +117,7 @@ Set it up like .env.example
 
 ## 📂Project Structure
 
-### Backend🛠️
+### 🛠️Backend
 
 /backend
 ├── src/
@@ -130,7 +130,7 @@ Set it up like .env.example
 ├── .env # 📝 Environment variables
 └── package.json # 📦 Node.js dependencies and scripts
 
-### Frontend 🖥️
+### 🖥️Frontend
 
 /frontend
 ├── public/ # 📁 Static assets
@@ -144,7 +144,7 @@ Set it up like .env.example
 ├── .env # 📝 Environment variables
 └── package.json # 📦 Node.js dependencies and scripts
 
-## 🤝 Contributing
+## 🤝Contributing
 
 We welcome contributions! 🙌 If you'd like to contribute to this project, please follow these steps:
 
@@ -187,6 +187,6 @@ Happy coding! 🚀📚
 
 ---
 
-## Authores 👤
+## 👤Authors
 
 1.**Vishwas GC**(github.com/Gcvishwas) 2.**Ujjwal Nepal**(github.com/ujjwal-207) 3.**Sujal Neupane**(github.com/SujalNeupane9) 4.**Sujan Raj Pandey**
