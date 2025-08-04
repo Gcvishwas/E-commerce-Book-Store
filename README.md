@@ -13,7 +13,7 @@ Welcome to the **E-commerce Book Store** repository! 🎉 This project is a full
 - [🛠️ Technologies Used](#️-technologies-used)
 - [🚀 Getting Started](#getting-started)
   - [📋 Prerequisites](#prerequisites)
-  - [⚙️ Installation](#-installation)
+  - [⚙️ Installation](#installation)
     - [💻 Backend Setup](#backend-setup)
     - [🌐 Frontend Setup](#frontend-setup)
 - [📂 Project Structure](#project-structure)
@@ -69,7 +69,7 @@ Before you begin, ensure you have the following installed on your machine:
 
 ---
 
-### ⚙️ Installation
+### ⚙️Installation
 
 #### 💻Backend Setup
 
