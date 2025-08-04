@@ -10,7 +10,7 @@ Welcome to the **E-commerce Book Store** repository! 🎉 This project is a full
 ## 📋 Table of Contents
 
 - [✨ Features](#features)
-- [🛠️ Technologies Used](#technologies-used)
+- [🛠️ Technologies-Used](#technologies-used)
 - [🚀 Getting Started](#getting-started)
   - [📋 Prerequisites](#prerequisites)
   - [⚙️ Installation](#installation)
