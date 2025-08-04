@@ -9,17 +9,17 @@ Welcome to the **E-commerce Book Store** repository! 🎉 This project is a full
 
 ## 📋 Table of Contents
 
-- [✨ Features](#-features)
-- [🛠️ Technologies Used](#🛠-technologies-used)
-- [🚀 Getting Started](#-getting-started)
-  - [📋 Prerequisites](#-prerequisites)
-  - [⚙️ Installation](#-installation)
-    - [💻 Backend Setup](#-backend-setup)
-    - [🌐 Frontend Setup](#-frontend-setup)
-- [📂 Project Structure](#-project-structure)
-- [🤝 Contributing](#-contributing)
-- [📜 License](#-license)
-- [👤 Authors](#-authors)
+- [✨ Features](#features)
+- [🛠️ Technologies Used](#technologies-used)
+- [🚀 Getting Started](#getting-started)
+  - [📋 Prerequisites](#prerequisites)
+  - [⚙️ Installation](#installation)
+    - [💻 Backend Setup](#backend-setup)
+    - [🌐 Frontend Setup](#frontend-setup)
+- [📂 Project Structure](#project-structure)
+- [🤝 Contributing](#contributing)
+- [📜 License](#license)
+- [👤 Authors](#authors)
 
 
 ---
