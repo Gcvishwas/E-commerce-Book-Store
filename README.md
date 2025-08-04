@@ -69,7 +69,7 @@ Before you begin, ensure you have the following installed on your machine:
 
 ---
 
-### ⚙️Installation
+## ⚙️Installation
 
 #### 💻Backend Setup
 
