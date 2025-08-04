@@ -36,7 +36,8 @@ Welcome to the **E-commerce Book Store** repository! 🎉 This project is a full
 
 ---
 
-## 🛠️Technologies Used
+
+## 🛠️Technologies-used
 
 ## Backend 🔧
 
@@ -45,7 +46,7 @@ Welcome to the **E-commerce Book Store** repository! 🎉 This project is a full
 - **JWT (JSON Web Tokens)** 🔑: For secure authentication and authorization.
 - **TypeScript** 📝: Superset of JavaScript that adds static types for better code quality and maintainability.
 
-###Frontend 🖥️
+### Frontend 🖥️
 
 - **React** ⚛️: A JavaScript library for building user interfaces.
 - **Redux** 📦: State management library for handling global application state.
@@ -93,7 +94,7 @@ Before you begin, ensure you have the following installed on your machine:
 4.**Environment Setup**:
 Set it up like .env.example
 
-#### 🌐 Frontend Setup
+#### 🌐Frontend Setup
 
 1. **Navigate to the frontend directory** 📂:
 
