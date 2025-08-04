@@ -10,7 +10,7 @@ Welcome to the **E-commerce Book Store** repository! 🎉 This project is a full
 ## 📋 Table of Contents
 
 - [✨ Features](#features)
-- [🛠️ Technologies Used](#-technologies-used)
+- [🛠️ Technologies Used](#technologies-used)
 - [🚀 Getting Started](#getting-started)
   - [📋 Prerequisites](#prerequisites)
   - [⚙️ Installation](#installation)
@@ -36,16 +36,16 @@ Welcome to the **E-commerce Book Store** repository! 🎉 This project is a full
 
 ---
 
-## 🛠️ Technologies Used
+## 🛠️Technologies Used
 
-### Backend 🔧
+## Backend 🔧
 
 - **Node.js** 🟩: Runtime environment for building server-side applications.
 - **MongoDB** 🗄️: NoSQL database for storing book, user, and order data.
 - **JWT (JSON Web Tokens)** 🔑: For secure authentication and authorization.
 - **TypeScript** 📝: Superset of JavaScript that adds static types for better code quality and maintainability.
 
-### Frontend 🖥️
+###Frontend 🖥️
 
 - **React** ⚛️: A JavaScript library for building user interfaces.
 - **Redux** 📦: State management library for handling global application state.
@@ -54,9 +54,9 @@ Welcome to the **E-commerce Book Store** repository! 🎉 This project is a full
 
 ---
 
-## 🚀 Getting Started
+## 🚀Getting Started
 
-### 📋 Prerequisites
+### 📋Prerequisites
 
 Before you begin, ensure you have the following installed on your machine:
 
@@ -67,9 +67,9 @@ Before you begin, ensure you have the following installed on your machine:
 
 ---
 
-### ⚙️ Installation
+### ⚙️Installation
 
-#### 💻 Backend Setup
+#### 💻Backend Setup
 
 1. **Clone the repository** 📂:
 
@@ -115,7 +115,7 @@ Set it up like .env.example
 
 ---
 
-## 📂 Project Structure
+## 📂Project Structure
 
 ### Backend🛠️
 
