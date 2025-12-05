@@ -9,22 +9,22 @@ Welcome to the **E-commerce Book Store** repository! 🎉 This project is a full
 
 ## 📋 Table of Contents
 
-- [✨ Features](#✨-features)
-- [🛠️ Technologies Used](#🛠️-technologies-used)
-- [🚀 Getting Started](#🚀-getting-started)
-  - [📋 Prerequisites](#📋-prerequisites)
-  - [⚙️ Installation](#⚙️-installation)
-    - [💻 Backend Setup](#💻-backend-setup)
-    - [🌐 Frontend Setup](#🌐-frontend-setup)
-- [📂 Project Structure](#📂-project-structure)
-- [🤝 Contributing](#🤝-contributing)
-- [📜 License](#📜-license)
-- [👤 Authors](#👤-authors)
+- [✨ Features](#features)
+- [🛠️ Technologies Used](#️-technologies-used)
+- [🚀 Getting Started](#getting-started)
+  - [📋 Prerequisites](#prerequisites)
+  - [⚙️ Installation](#installation)
+    - [💻 Backend Setup](#backend-setup)
+    - [🌐 Frontend Setup](#frontend-setup)
+- [📂 Project Structure](#project-structure)
+- [🤝 Contributing](#contributing)
+- [📜 License](#license)
+- [👤 Authors](#authors)
 
 
 ---
 
-## ✨  Features
+## ✨Features 
 
 - **🔒 User Authentication**: Secure user login and registration using JWT.
 - **📚 Book Listings**: Browse and search through a wide range of books.
@@ -36,9 +36,11 @@ Welcome to the **E-commerce Book Store** repository! 🎉 This project is a full
 
 ---
 
+
 ## 🛠️ Technologies Used
 
-### Backend 🔧
+
+## Backend 🔧
 
 - **Node.js** 🟩: Runtime environment for building server-side applications.
 - **MongoDB** 🗄️: NoSQL database for storing book, user, and order data.
@@ -54,9 +56,9 @@ Welcome to the **E-commerce Book Store** repository! 🎉 This project is a full
 
 ---
 
-## 🚀 Getting Started
+## 🚀Getting Started
 
-### 📋 Prerequisites
+### 📋Prerequisites
 
 Before you begin, ensure you have the following installed on your machine:
 
@@ -67,9 +69,9 @@ Before you begin, ensure you have the following installed on your machine:
 
 ---
 
-### ⚙️ Installation
+### ⚙️Installation
 
-#### 💻 Backend Setup
+#### 💻Backend Setup
 
 1. **Clone the repository** 📂:
 
@@ -93,7 +95,7 @@ Before you begin, ensure you have the following installed on your machine:
 4.**Environment Setup**:
 Set it up like .env.example
 
-#### 🌐 Frontend Setup
+#### 🌐Frontend Setup
 
 1. **Navigate to the frontend directory** 📂:
 
@@ -115,9 +117,9 @@ Set it up like .env.example
 
 ---
 
-## 📂 Project Structure
+## 📂Project Structure
 
-### Backend🛠️
+### 🛠️Backend
 
 /backend
 ├── src/
@@ -130,7 +132,7 @@ Set it up like .env.example
 ├── .env # 📝 Environment variables
 └── package.json # 📦 Node.js dependencies and scripts
 
-### Frontend 🖥️
+### 🖥️Frontend
 
 /frontend
 ├── public/ # 📁 Static assets
@@ -144,7 +146,7 @@ Set it up like .env.example
 ├── .env # 📝 Environment variables
 └── package.json # 📦 Node.js dependencies and scripts
 
-## 🤝 Contributing
+## 🤝Contributing
 
 We welcome contributions! 🙌 If you'd like to contribute to this project, please follow these steps:
 
@@ -187,6 +189,6 @@ Happy coding! 🚀📚
 
 ---
 
-## Authores 👤
+## 👤Authors
 
 1.**Vishwas GC**(github.com/Gcvishwas) 2.**Ujjwal Nepal**(github.com/ujjwal-207) 3.**Sujal Neupane**(github.com/SujalNeupane9) 4.**Sujan Raj Pandey**
